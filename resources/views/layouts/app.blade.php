@@ -21,7 +21,7 @@
         <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Item 1 <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/curso/create">Insertar curso<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>

@@ -14,7 +14,7 @@
                             <img  style="height: 100px;  width:100px; margin:20px;"src="{{ Storage::url($velas->imagen) }}"
                                 class="card-img-top mx-auto d-block" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $velas->hostia }} </h5>
+                                <h5 class="card-title">{{ $velas->nombre }} </h5>
                                
                                 {{--se necesita el id para ver el registro en particular--}}
                                 <a href="/curso/{{$velas->id}}" class="btn btn-primary">Go somewhere</a>

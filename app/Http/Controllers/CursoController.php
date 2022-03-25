@@ -46,13 +46,13 @@ class CursoController extends Controller
         //return $request->input('mamaste');
         $cursitosXD = new curso();
         //esto me permitira manipular la tabla
-        $cursitosXD->hostia = $request->input('mamaste');
-        $cursitosXD->descripcion = $request->input('mamastepordos');
+        $cursitosXD->nombre = $request->input('nombre');
+        $cursitosXD->desc = $request->input('desc');
         if($request->hasfile('img')){
             $cursitosXD->imagen = $request->file('img')->store('public');
         }
         $cursitosXD->save();
-        return 'ostia tio podiste vete a casa hijodeputa';
+        return 'Datos Guardaos';
     }
 
 
@@ -81,7 +81,8 @@ class CursoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cursito = curso::find($id);
+        return view('cursos.edit', compact('cursito'));
     }
 
     /**
@@ -93,8 +94,13 @@ class CursoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //con el metodo all() veo todo la informacion
-
+        $cursito = curso::find($id);
+        $cursito->fill($request->except('img'));
+        if ($request->hasfile('img')){
+            $cursito-> imagen = $request->file('img')->store('public');
+        }
+        $cursito->save();
+        return 'dio';
     }
 
     /**

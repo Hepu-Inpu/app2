@@ -21,11 +21,11 @@
             @csrf
             <div class="form-group">
                 <label for="NomCurso">Nombre del curso</label>
-                <input type="text" class="form-control" id="NomCurso" name="mamaste" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="NomCurso" name="nombre" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
                 <label for="DesCurso">descripcion del curso </label>
-                <input type="text" class="form-control" id="DesCurso" name="mamastepordos" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="DesCurso" name="desc" aria-describedby="emailHelp">
             </div>
             <div class="form-group">
                 <label for="img">cargar imagen </label><br>
